@@ -7,12 +7,12 @@ import "./Products.css";
 function Products () {
     const { products, isLoading, error } = useContext(productsContext);
     return (
-        <>
+        <>  <img src="2.pictur.png" alt="/" width={100}/> 
         <header style={{height: "100px"}}>
-            <h1>Fake Store</h1> 
+      
             <Navbar/>
         </header>
-        <h2>list products</h2>
+        
       <main className="container">
         {products.map((prod) =>(
             <Product prod={prod} />

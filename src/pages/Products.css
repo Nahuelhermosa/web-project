@@ -3,7 +3,7 @@
     padding: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1rem;
-    background-image: url('/public/carrito.jpg');
+    background-image: url('/public/lombor.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

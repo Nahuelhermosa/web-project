@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar";
 function Home () {
     return (
         <>
-        <header>
-            <h1>Fake Store</h1> 
+        <header> 
             <Navbar/>
-        </header>
+        </header> 
+         <img src="2.pictur.png" alt="/" width={200}/> 
         <h2>us</h2>
         </>
     )
