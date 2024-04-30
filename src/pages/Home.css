@@ -1,0 +1,7 @@
+.descripcion {
+    color:#fffaf0;
+    text-shadow: -2px -2px 0 #050505, 2px -2px 0 #070707, -2px 2px 0 #070707, 2px 2px 0 #030303;
+    font-size: 250%;
+    font-weight: 800;
+    margin-top: 5px;
+}

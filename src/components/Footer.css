@@ -1,0 +1,11 @@
+
+   
+    .footer {
+        background-color: #e9f0cf; /* Color de fondo del footer */
+        color: #333; /* Color del texto */
+        padding: 5px; /* Espaciado interno */
+        border-radius: 10px;
+        bottom: 0;
+       
+      }
+
