@@ -1,3 +1,9 @@
+.filtros{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+}
 .container{
     display: grid;
     padding: 1rem;

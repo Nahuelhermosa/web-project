@@ -7,18 +7,22 @@ export const ProductsContextProvider = ({children}) => {
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState (true);
     const [error, setError] = useState(null);
-    const [sortedMaxToMin, setSortedMaxToMin] =useState (false);
+    const [sortedMaxToMin, setSortedMaxToMin] = useState (false);
+    const [maxPrice, setMaxPrice] = useState(1000);
+    const [query, setQuery] = useState ("")
 
-    const handleSort =()=>{
-      if(sortedMaxToMin){
-        const sortedProducts= products.toSorted((a, b)=>a.price - b.price);
+    const handleSort = () => {
+      if (sortedMaxToMin) {
+        const sortedProducts = products.toSorted((a, b) => a.price - b.price);
         setProducts(sortedProducts);
-      }else {
-        const sortedProducts= products.toSorted((a, b)=>b.price - a.price);
+      } else {
+        const sortedProducts = products.toSorted((a, b) => b.price - a.price);
         setProducts(sortedProducts);
       }
       setSortedMaxToMin(!sortedMaxToMin);
-    }
+    };
+    const handleMaxPrice =(price) => setMaxPrice(price);
+
     const fetchData = async () => {
         try {
             setError(null);
@@ -35,8 +39,16 @@ export const ProductsContextProvider = ({children}) => {
   useEffect(()=> {
     fetchData();
   }, []);
-  return(
-    <productsContext.Provider value={{products, isLoading,error}}>
+  return (
+    <productsContext.Provider 
+    value={{products,
+     isLoading,
+     error,
+     sortedMaxToMin,
+     maxPrice,
+     query,
+     handleSort,
+     handleMaxPrice }}>
      {children}
     </productsContext.Provider>
   );
