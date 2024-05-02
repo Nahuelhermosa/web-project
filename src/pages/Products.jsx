@@ -11,13 +11,14 @@ function Products () {
     const { products, isLoading, error, maxPrice, query } = useContext(productsContext);
 
     return (
-
         <>
-        <img src="2.pictur.png" alt="/" width={100}/>  
+
+        <img src="2.pictur.png" alt="/" width={100}/>
+
         <header style={{height: "120px"}}>
-      <Navbar/> 
-     
+        <Navbar/> 
         </header> 
+
       <div className="filtros">
       <Sort />
       <FilterByPrice/>
