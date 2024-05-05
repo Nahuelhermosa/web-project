@@ -5,11 +5,12 @@ export const productsContext = createContext([initialProduct]);
 
 export const ProductsContextProvider = ({children}) => {
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState ([])
     const [isLoading, setIsLoading] = useState (true);
     const [error, setError] = useState(null);
     const [sortedMaxToMin, setSortedMaxToMin] = useState (false);
     const [maxPrice, setMaxPrice] = useState(1000);
-    const [query, setQuery] = useState ("")
+    const [query, setQuery] = useState ("");
 
     const handleSort = () => {
       if (sortedMaxToMin) {
@@ -22,6 +23,12 @@ export const ProductsContextProvider = ({children}) => {
       setSortedMaxToMin(!sortedMaxToMin);
     };
     const handleMaxPrice =(price) => setMaxPrice(price);
+    const handleQuery = (searchTerm) => setQuery (searchTerm);
+    const addToCart= (prod) => {
+      setCart((prevValue)=> {
+        return[...prevValue,prod]
+      });
+    };
 
     const fetchData = async () => {
         try {
@@ -41,12 +48,16 @@ export const ProductsContextProvider = ({children}) => {
   }, []);
   return (
     <productsContext.Provider 
-    value={{products,
+    value={{
+     products,
+     cart,
      isLoading,
      error,
      sortedMaxToMin,
      maxPrice,
      query,
+     handleQuery,
+     addToCart,
      handleSort,
      handleMaxPrice }}>
      {children}

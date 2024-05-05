@@ -6,6 +6,8 @@ import "./Products.css";
 import Footer from "../components/Footer";
 import Sort from "../components/Sort";
 import FilterByPrice from "../components/FilterByPrice";
+import Search from "../components/Search";
+
 
 function Products () {
     const { products, isLoading, error, maxPrice, query } = useContext(productsContext);
@@ -20,15 +22,22 @@ function Products () {
         </header> 
 
       <div className="filtros">
+      <Search/>
       <Sort />
       <FilterByPrice/>
       </div>
+      <p> items </p>
       
       <main className="container">
+
         {products
-        .filter((prod)=>prod.price <= maxPrice && prod.title.includes(query) )
+        .filter((prod)=>
+            prod.price <= maxPrice && 
+            prod.title.toLocaleLowerCase().includes(query.toLocaleLowerCase()) 
+        )
+
         .map((prod) =>(
-            <Product prod={prod} />
+            <Product prod={prod} key={prod.id}/>
         ))}
         </main>
         <Footer/>
