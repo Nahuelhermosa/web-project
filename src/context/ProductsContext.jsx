@@ -25,9 +25,8 @@ export const ProductsContextProvider = ({children}) => {
     const handleMaxPrice =(price) => setMaxPrice(price);
     const handleQuery = (searchTerm) => setQuery (searchTerm);
     const addToCart= (prod) => {
-      setCart((prevValue)=> {
-        return[...prevValue,prod]
-      });
+      setCart((prevValue)=> [...prevValue,prod]
+      );
     };
 
     const fetchData = async () => {

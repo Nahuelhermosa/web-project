@@ -1,11 +1,17 @@
 import { NavLink } from "react-router-dom";
-import React from 'react' 
+import React from 'react'
+import "./Navbar.css" 
+import Search from "./Search";
 
 function Navbar () {
     return(
-        <nav>
+        <nav> 
+                 
+            <img src="2.pictur.png" alt="/" width={100}/>
             <NavLink to={"/"}>Home</NavLink>
             <NavLink to={"/Products"}>Products</NavLink>
+            <Search/>
+            
         </nav>
     );
     

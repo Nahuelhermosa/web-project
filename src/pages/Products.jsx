@@ -10,26 +10,23 @@ import Search from "../components/Search";
 
 
 function Products () {
-    const { products, isLoading, error, maxPrice, query } = useContext(productsContext);
+    const { products, isLoading, error, maxPrice, query, cart } = useContext(productsContext);
 
     return (
         <>
-
-        <img src="2.pictur.png" alt="/" width={100}/>
-
         <header style={{height: "120px"}}>
         <Navbar/> 
         </header> 
 
       <div className="filtros">
-      <Search/>
-      <Sort />
       <FilterByPrice/>
+      <Sort />
+      <p> Items: {cart.length} </p> 
+      <Search/>
       </div>
-      <p> items </p>
+      
       
       <main className="container">
-
         {products
         .filter((prod)=>
             prod.price <= maxPrice && 
@@ -39,7 +36,8 @@ function Products () {
         .map((prod) =>(
             <Product prod={prod} key={prod.id}/>
         ))}
-        </main>
+       </main>
+
         <Footer/>
         </>
     );
