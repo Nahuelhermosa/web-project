@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Sort from "../components/Sort";
 import FilterByPrice from "../components/FilterByPrice";
 import Search from "../components/Search";
+import CartData from "../components/CartData";
 
 
 function Products () {
@@ -21,7 +22,7 @@ function Products () {
       <div className="filtros">
       <FilterByPrice/>
       <Sort />
-      <p> Items: {cart.length} </p> 
+      <CartData/>
       <Search/>
       </div>
       

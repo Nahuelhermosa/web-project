@@ -3,18 +3,20 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: rgb(127, 204, 255);
-    padding: 10px; /* Ajusta el relleno de la barra de navegación */
+    padding: 5px; /* Ajusta el relleno de la barra de navegación */
     max-width: 100%;
     width: 100%;
-    align-items: center;
+    border-radius: 7px;
+    
 }
 
 nav img {
-    width: 100px; /* Ancho fijo para la imagen */
+    width: 75px; /* Ancho fijo para la imagen */
     margin-right: 10px; /* Espacio entre la imagen y los enlaces */
 }
 
 nav a {
+    
     text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
     margin-right: 10px; /* Espacio entre los enlaces */
     color: black; /* Color del texto de los enlaces */

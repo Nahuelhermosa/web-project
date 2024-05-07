@@ -16,7 +16,7 @@ function Search () {
         onChange={(e) => handleQuery(e.target.value)}
       />
     </form>
-    <span> {query}</span>
+   
     </>
   )
 }
