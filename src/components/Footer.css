@@ -1,9 +1,10 @@
 
    
     .footer {
-        background-color: #e9f0cf; /* Color de fondo del footer */
-        color: #333; /* Color del texto */
-        padding: 5px; /* Espaciado interno */
+        background-color: rgb(230, 230, 159);/* Color de fondo del footer */
+        color: #fcfbfb; /* Color del texto */
+        text-shadow: -1px -1px 0 #050505, 1px -1px 0 #070707, -1px 1px 0 #070707, 1px 1px 0 #030303;
+        font-size:150% ;
         border-radius: 10px;
         bottom: 0;
        

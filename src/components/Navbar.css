@@ -2,7 +2,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(127, 204, 255);
+    background-color: rgb(230, 230, 159);
     padding: 5px; /* Ajusta el relleno de la barra de navegación */
     max-width: 100%;
     width: 100%;
@@ -12,14 +12,16 @@ nav {
 
 nav img {
     width: 75px; /* Ancho fijo para la imagen */
-    margin-right: 10px; /* Espacio entre la imagen y los enlaces */
+    margin-right: 5px; /* Espacio entre la imagen y los enlaces */
 }
 
 nav a {
     
     text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
     margin-right: 10px; /* Espacio entre los enlaces */
-    color: black; /* Color del texto de los enlaces */
+    color: rgb(248, 245, 245); /* Color del texto de los enlaces */
+    text-shadow: -1px -1px 0 #050505, 1px -1px 0 #070707, -1px 1px 0 #070707, 1px 1px 0 #030303;
+    font-size:250% ;
 }
 
 nav a:last-child {
