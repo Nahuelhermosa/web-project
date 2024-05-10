@@ -1,12 +1,13 @@
 
    
     .footer {
-        background-color: rgb(230, 230, 159);/* Color de fondo del footer */
-        color: #fcfbfb; /* Color del texto */
-        text-shadow: -1px -1px 0 #050505, 1px -1px 0 #070707, -1px 1px 0 #070707, 1px 1px 0 #030303;
+        background-color: rgb(250, 153, 73);/* Color de fondo del footer */
+        color: #070707; /* Color del texto */
         font-size:150% ;
         border-radius: 10px;
         bottom: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
        
       }
 

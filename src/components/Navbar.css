@@ -2,7 +2,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(230, 230, 159);
+    background-color: rgb(250, 153, 73);
     padding: 5px; /* Ajusta el relleno de la barra de navegación */
     max-width: 100%;
     width: 100%;
@@ -19,8 +19,8 @@ nav a {
     
     text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
     margin-right: 10px; /* Espacio entre los enlaces */
-    color: rgb(248, 245, 245); /* Color del texto de los enlaces */
-    text-shadow: -1px -1px 0 #050505, 1px -1px 0 #070707, -1px 1px 0 #070707, 1px 1px 0 #030303;
+    color: rgb(10, 10, 10); /* Color del texto de los enlaces */
+   
     font-size:250% ;
 }
 

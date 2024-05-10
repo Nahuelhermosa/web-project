@@ -1,14 +1,13 @@
-.descripcion {
-    color: rgb(230, 230, 159);
-    text-shadow: -2px -2px 0 #050505, 2px -2px 0 #070707, -2px 2px 0 #070707, 2px 2px 0 #030303;
-    font-size: 200%;
-    font-weight: 800;
-    margin-top: 5px;
-}
 .pictur{
  margin: 5%;
  display: flex;
+ padding: 1rem;
 }
-.descripcion{
-    margin-left: 5%;
+.descripcion {
+    color: rgb(8, 8, 8);
+    text-shadow: -2px -2px 0 rgb(250, 153, 73), 2px -2px 0 rgb(250, 153, 73), -2px 2px 0 rgb(250, 153, 73), 2px 2px 0 rgb(250, 153, 73);
+    font-size: 70px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
