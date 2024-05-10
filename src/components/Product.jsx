@@ -10,7 +10,8 @@ function Product({prod}) {
             <div>
             <img src={prod.image} alt={prod.title} style={{width: "50%"}}/>
             <p>${prod.price}</p>
-            <button onClick={()=> addToCart(prod)}>Add to Cart</button>
+            <button onClick={() => addToCart(prod)} style={card.button}>Add to Cart</button>
+
             </div>
             <p>{prod.description.slice(0, 40)}...</p>
         </div>
