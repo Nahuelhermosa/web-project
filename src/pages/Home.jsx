@@ -1,20 +1,15 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Product from "../components/Product"; // Importa el componente Product
+import Product from "../components/Product";
 import { productsContext } from "../context/ProductsContext";
 import "./Home.css";
 
 function Home() {
-    const { products } = useContext(productsContext);
-    const [firstProduct, setFirstProduct] = useState(null);
-
-    // Cuando los productos cambien, actualiza el primer producto
+    const { randomProduct } = useContext(productsContext); // Cambio aquí para usar el producto aleatorio en lugar del primer producto
     useEffect(() => {
-        if (products.length > 0) {
-            setFirstProduct(products[0]); // Obtén el primer producto de la lista
-        }
-    }, [products]);
+        // Actualizamos el componente cuando cambie el producto aleatorio
+    }, [randomProduct]);
 
     return (
         <>
@@ -22,9 +17,8 @@ function Home() {
                 <Navbar/>
             </header> 
             <div className="pictur">
-                {/* Muestra la tarjeta del primer producto si está disponible */}
-                {firstProduct && (
-                    <Product prod={firstProduct} key={firstProduct.id}   />
+                {randomProduct && (
+                    <Product prod={randomProduct} key={randomProduct.id} />
                 )}
                 <p className="descripcion">Vintage lab es tu destino perfecto para descubrir una colección única de moda vintage y artículos del hogar con un encanto nostálgico. </p>
             </div>

@@ -11,6 +11,8 @@ export const ProductsContextProvider = ({children}) => {
     const [sortedMaxToMin, setSortedMaxToMin] = useState (false);
     const [maxPrice, setMaxPrice] = useState(1000);
     const [query, setQuery] = useState ("");
+    const [randomProduct, setRandomProduct] = useState(initialProduct); // Estado para almacenar el producto aleatorio
+    
 
     const handleSort = () => {
       if (sortedMaxToMin) {
@@ -45,6 +47,15 @@ export const ProductsContextProvider = ({children}) => {
   useEffect(()=> {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (products.length > 0) {
+        const randomIndex = Math.floor(Math.random() * products.length);
+        setRandomProduct(products[randomIndex]);
+    }
+}, [products]);
+
+
   return (
     <productsContext.Provider 
     value={{
@@ -55,6 +66,7 @@ export const ProductsContextProvider = ({children}) => {
      sortedMaxToMin,
      maxPrice,
      query,
+     randomProduct, // Agregamos el producto aleatorio al contexto
      handleQuery,
      addToCart,
      handleSort,

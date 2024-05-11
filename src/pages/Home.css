@@ -1,12 +1,12 @@
 .pictur{
  margin: 5%;
  display: flex;
- padding: 1rem;
+ padding: 1.5rem;
 }
 .descripcion {
     color: rgb(8, 8, 8);
     text-shadow: -2px -2px 0 rgb(250, 153, 73), 2px -2px 0 rgb(250, 153, 73), -2px 2px 0 rgb(250, 153, 73), 2px 2px 0 rgb(250, 153, 73);
-    font-size: 70px;
+    font-size: 60px;
     margin-top: 5px;
     margin-left: 20px;
     margin-right: 20px;
