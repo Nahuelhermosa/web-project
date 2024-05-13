@@ -4,3 +4,8 @@ export const getAllProducts = async ()=> {
     const data = await res.json();
     return data;
 }
+export const getCartFromStorage = () => {
+    const storedCart = window.localStorage.getItem("cart");
+    const cart = JSON.parse(storedCart);
+    return cart ? cart : [];
+  };

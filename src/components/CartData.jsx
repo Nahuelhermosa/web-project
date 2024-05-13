@@ -9,7 +9,7 @@ function CartData () {
     return cart?.length ? (
     <>
             <Link to="/Cart">
-            <MdShoppingCart size={30} color="blue"/>{""}     
+            <MdShoppingCart size={30} color="black"/>{""}     
             </Link>
             <span>${getTotalCartPrice(cart)}</span>
     </>

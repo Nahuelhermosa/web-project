@@ -20,7 +20,7 @@ function Home() {
                 {randomProduct && (
                     <Product prod={randomProduct} key={randomProduct.id} />
                 )}
-                <p className="descripcion">Vintage lab es tu destino perfecto para descubrir una colección única de moda vintage y artículos del hogar con un encanto nostálgico. </p>
+                <p className="descripcion">Vintage Lab is your perfect destination to discover a unique collection of vintage fashion and home items with a nostalgic charm. </p>
             </div>
             <Footer/>
         </> 

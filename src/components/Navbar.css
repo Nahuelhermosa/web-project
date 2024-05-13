@@ -1,29 +1,31 @@
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(250, 153, 73);
-    padding: 5px; /* Ajusta el relleno de la barra de navegación */
-    max-width: 100%;
-    width: 100%;
-    border-radius: 7px;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(250, 153, 73);
+  padding: 5px; /* Ajusta el relleno de la barra de navegación */
+  width: 100%;
+  border-radius: 7px;
 }
 
 nav img {
-    width: 75px; /* Ancho fijo para la imagen */
-    margin-right: 5px; /* Espacio entre la imagen y los enlaces */
+  width: 75px; /* Ancho fijo para la imagen */
+  margin-top: 5px; /* Ajusta el margen superior de la imagen */
+  margin-left: 20px; /* Ajusta el margen izquierdo de la imagen */
 }
 
 nav a {
-    
-    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
-    margin-right: 10px; /* Espacio entre los enlaces */
-    color: rgb(10, 10, 10); /* Color del texto de los enlaces */
-   
-    font-size:250% ;
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  font-size: 250%; /* Ajusta el tamaño de fuente utilizando un porcentaje */
+  margin-right: 20px;
 }
 
 nav a:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último enlace */
+  margin-right: 20px; /* Agrega margen derecho al último enlace */
+}
+
+/* Ajuste de margen para el ícono de búsqueda */
+nav .search-icon {
+  margin-right: 20px; /* Agrega margen derecho al ícono de búsqueda */
 }

@@ -1,11 +1,11 @@
 import React,{ useState, useEffect, createContext } from "react";
-import { getAllProducts } from "../services/productService";
+import { getAllProducts, getCartFromStorage } from "../services/productService";
 import { initialProduct } from "../services/initialProduct";
 export const productsContext = createContext([initialProduct]);
 
 export const ProductsContextProvider = ({children}) => {
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState ([])
+    const [cart, setCart] = useState (getCartFromStorage())
     const [isLoading, setIsLoading] = useState (true);
     const [error, setError] = useState(null);
     const [sortedMaxToMin, setSortedMaxToMin] = useState (false);
@@ -26,9 +26,14 @@ export const ProductsContextProvider = ({children}) => {
     };
     const handleMaxPrice =(price) => setMaxPrice(price);
     const handleQuery = (searchTerm) => setQuery (searchTerm);
-    const addToCart= (prod) => {
-      setCart((prevValue)=> [...prevValue,prod]
-      );
+
+    const addToCart = (prod) => {
+      setCart((prevValue) => [...prevValue, prod]);
+      const newCart = [...cart, prod];
+      window.localStorage.setItem("cart", JSON.stringify(newCart));
+    };
+    const removeFromCart = (id) => {
+      setCart(cart.filter((item) => item.id !== id));
     };
 
     const fetchData = async () => {
@@ -53,11 +58,18 @@ export const ProductsContextProvider = ({children}) => {
         const randomIndex = Math.floor(Math.random() * products.length);
         setRandomProduct(products[randomIndex]);
     }
+    
+        // Actualiza el producto aleatorio cada 10 segundos
+        const intervalId = setInterval(randomProduct, 5000);
+
+        // Limpia el intervalo cuando el componente se desmonta
+        return () => clearInterval(intervalId);
 }, [products]);
 
 
   return (
     <productsContext.Provider 
+    
     value={{
      products,
      cart,
@@ -69,9 +81,13 @@ export const ProductsContextProvider = ({children}) => {
      randomProduct, // Agregamos el producto aleatorio al contexto
      handleQuery,
      addToCart,
+     removeFromCart,
      handleSort,
-     handleMaxPrice }}>
+     handleMaxPrice 
+     }}>
+
      {children}
+
     </productsContext.Provider>
   );
 };
