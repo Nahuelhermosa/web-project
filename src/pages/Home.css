@@ -4,8 +4,8 @@
  padding: 1.5rem;
 }
 .descripcion {
-    color: rgb(8, 8, 8);
-    text-shadow: -2px -2px 0 rgb(250, 153, 73), 2px -2px 0 rgb(250, 153, 73), -2px 2px 0 rgb(250, 153, 73), 2px 2px 0 rgb(250, 153, 73);
+    color:  rgb(250, 250, 250);
+    text-shadow: -1px -1px 0 rgb(8, 8, 8), 1px 1px 0  rgb(7, 7, 7), -1px 1px 0 rgb(10, 10, 10), 1px 1px 0 rgb(7, 7, 7);
     font-size: 60px;
     margin-top: 5px;
     margin-left: 20px;

@@ -16,7 +16,8 @@ nav img {
 
 nav a {
   text-decoration: none;
-  color: rgb(10, 10, 10);
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 0 rgb(10, 10, 10), 1px -1px 0 rgb(5, 5, 5), -1px 1px 0 rgb(3, 3, 3), 1px 1px 0 rgb(10, 10, 10);
   font-size: 250%; /* Ajusta el tamaño de fuente utilizando un porcentaje */
   margin-right: 20px;
 }

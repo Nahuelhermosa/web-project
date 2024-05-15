@@ -3,6 +3,7 @@ import { getAllProducts, getCartFromStorage } from "../services/productService";
 import { initialProduct } from "../services/initialProduct";
 export const productsContext = createContext([initialProduct]);
 
+
 export const ProductsContextProvider = ({children}) => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState (getCartFromStorage())
@@ -83,7 +84,8 @@ export const ProductsContextProvider = ({children}) => {
      addToCart,
      removeFromCart,
      handleSort,
-     handleMaxPrice 
+     handleMaxPrice,
+     
      }}>
 
      {children}

@@ -2,7 +2,8 @@
    
     .footer {
         background-color: rgb(250, 153, 73);/* Color de fondo del footer */
-        color: #070707; /* Color del texto */
+        color: rgb(255, 255, 255);
+        text-shadow: -1px -1px 0 rgb(10, 10, 10), 1px -1px 0 rgb(5, 5, 5), -1px 1px 0 rgb(3, 3, 3), 1px 1px 0 rgb(10, 10, 10);
         font-size:150% ;
         border-radius: 10px;
         bottom: 0;

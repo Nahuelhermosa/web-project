@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import { ProductsContextProvider } from './context/ProductsContext';
 import Cart from './components/Cart';
 import Contact from './pages/Contact';
+import User from './pages/User';
 
 
 
@@ -18,6 +19,7 @@ return (
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/Products' element={<Products />}/>
         <Route path='/Contact' element={<Contact/>}/>
+        <Route path='/User' element={<User/>}/>
       </Routes>
     </ProductsContextProvider>
     </BrowserRouter>
