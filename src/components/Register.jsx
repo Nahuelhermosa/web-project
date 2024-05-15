@@ -19,11 +19,11 @@ function Register () {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className="descripcion">
         Email:
         <input type="text" placeholder="nahuelman@mail.com" name="email" />
       </label>
-      <label>
+      <label className="descripcion">
         Password:
         <input type="password" placeholder="keep your password secure" name="password"/>
       </label>
