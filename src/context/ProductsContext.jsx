@@ -68,7 +68,7 @@ export const ProductsContextProvider = ({ children }) => {
         const randomIndex = Math.floor(Math.random() * products.length);
         setRandomProduct(products[randomIndex]);
       }
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(intervalId);
   }, [products]);

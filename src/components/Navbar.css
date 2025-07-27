@@ -3,30 +3,41 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(250, 153, 73);
-  padding: 5px; /* Ajusta el relleno de la barra de navegación */
+  padding: 0.8rem 1rem; /* Más alto y con padding horizontal estándar */
   width: 100%;
-  border-radius: 7px;
+  box-sizing: border-box; /* Para que el padding no rompa el ancho */
+  border-radius: 6px; /* Sin bordes redondeados para ocupar toda la pantalla */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombras para dar profundidad */
 }
 
 nav img {
-  width: 75px; /* Ancho fijo para la imagen */
-  margin-top: 5px; /* Ajusta el margen superior de la imagen */
-  margin-left: 20px; /* Ajusta el margen izquierdo de la imagen */
+  width: 70px;
+  height: auto;
+  margin: 0; /* Quitamos márgenes extra */
 }
 
 nav a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  text-shadow: -1px -1px 0 rgb(10, 10, 10), 1px -1px 0 rgb(5, 5, 5), -1px 1px 0 rgb(3, 3, 3), 1px 1px 0 rgb(10, 10, 10);
-  font-size: 250%; /* Ajusta el tamaño de fuente utilizando un porcentaje */
-  margin-right: 20px;
+  color: #fff;
+  font-size: 1.5rem; /* Tamaño de fuente estándar */
+  font-weight: 600;
+  margin-left: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-nav a:last-child {
-  margin-right: 20px; /* Agrega margen derecho al último enlace */
+nav a:hover {
+  color: #333; /* Cambia el color al pasar el mouse */
+  transform: scale(1.05);
 }
 
-/* Ajuste de margen para el ícono de búsqueda */
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Separación estándar entre links */
+}
+
 nav .search-icon {
-  margin-right: 20px; /* Agrega margen derecho al ícono de búsqueda */
+  margin-left: 1.5rem;
+  cursor: pointer;
 }

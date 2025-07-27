@@ -1,14 +1,14 @@
 
    
     .footer {
-        background-color: rgb(250, 153, 73);/* Color de fondo del footer */
-        color: rgb(255, 255, 255);
-        text-shadow: -1px -1px 0 rgb(10, 10, 10), 1px -1px 0 rgb(5, 5, 5), -1px 1px 0 rgb(3, 3, 3), 1px 1px 0 rgb(10, 10, 10);
-        font-size:150% ;
-        border-radius: 10px;
-        bottom: 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
-       
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(250, 153, 73);
+  padding: 0.8rem 1rem; /* Más alto y con padding horizontal estándar */
+  width: 100%;
+  box-sizing: border-box; /* Para que el padding no rompa el ancho */
+  border-radius: 6px; /* Sin bordes redondeados para ocupar toda la pantalla */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombras para dar profundidad */
       }
 

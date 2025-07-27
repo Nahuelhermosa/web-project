@@ -7,19 +7,13 @@ function Contact() {
  
     return (
       <>
+      <div className="contact.gloval">
       <Navbar/>
       
       <div className='contacto'>
             <h1>Contact</h1>
             <h2>Any questions regarding the warranty of consoles and sports accessories will be promptly answered. Thank you</h2>
             
-
-            <form name="contacto" data-netlify="true" netlify-honeypot="bot-field" hidden> 
-            <input type="text" name='nombre' />
-            <input type="email" name='email' />
-            <textarea name="comentario" ></textarea>
-            </form>
-
             <form method='post' className='formulario'>
                 <label>
                     Name:
@@ -40,6 +34,7 @@ function Contact() {
             </div>
       
       <Footer/>
+      </div>
       </>
     );
   }
